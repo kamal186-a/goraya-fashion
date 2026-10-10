@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GORAYA FASHION STORE | Men & Women Clothing in Pakistan</title>
+<meta name="description" content="GORAYA FASHION STORE - Premium men's and women's clothing in Pakistan. Order easily on WhatsApp. Prices in PKR.">
+<meta name="keywords" content="Goraya Fashion Store, Pakistani clothes, shalwar kameez, kurta, lawn suits, online clothing store">
+<meta name="theme-color" content="#0d0d0d">
+<meta property="og:title" content="GORAYA FASHION STORE">
+<meta property="og:description" content="Premium men's and women's fashion. Order on WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d0d0d'/%3E%3Ctext x='32' y='44' font-size='38' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23c9a24b'%3EG%3C/text%3E%3C/svg%3E">
+<style>
+:root{--black:#0d0d0d;--cream:#f5efe3;--gold:#c9a24b;--gold2:#e0bf72;--card:#fffaf0;--text:#222}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Segoe UI,Roboto,Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.5}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:auto;padding:0 16px}
+header{background:var(--black);position:sticky;top:0;z-index:50;border-bottom:2px solid var(--gold)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:Georgia,serif;color:var(--gold);font-weight:bold;letter-spacing:2px;font-size:1.05rem;text-decoration:none}
+.links{display:flex;gap:18px;align-items:center}
+.links a{color:var(--cream);text-decoration:none;font-size:.9rem}
+.links a:hover{color:var(--gold)}
+.cartbtn{background:var(--gold);color:var(--black);border:0;padding:8px 14px;border-radius:20px;font-weight:700;cursor:pointer}
+.menu{display:none;background:none;border:0;color:var(--gold);font-size:1.6rem;cursor:pointer}
+.hero{background:linear-gradient(rgba(13,13,13,.75),rgba(13,13,13,.85)),repeating-linear-gradient(45deg,#1a1a1a 0 12px,#111 12px 24px);color:var(--cream);text-align:center;padding:70px 16px}
+.hero small{color:var(--gold);letter-spacing:4px}
+.hero h1{font-family:Georgia,serif;font-size:clamp(1.8rem,6vw,3.4rem);margin:10px 0;color:var(--gold2)}
+.hero p{max-width:560px;margin:0 auto 22px}
+.btn{display:inline-block;background:var(--gold);color:var(--black);padding:12px 26px;border-radius:30px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:1rem}
+.btn.dark{background:var(--black);color:var(--gold)}
+.btn:hover{filter:brightness(1.1)}
+section{padding:46px 0}
+h2.title{font-family:Georgia,serif;text-align:center;font-size:1.8rem;margin-bottom:6px}
+.sub{text-align:center;color:#777;margin-bottom:24px}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.tools input,.tools select{padding:11px 14px;border:1px solid #cdbf9f;border-radius:10px;font-size:1rem;background:#fff}
+.tools input{flex:1 1 220px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:10px 18px;border-radius:25px;border:1px solid var(--black);background:transparent;cursor:pointer;font-weight:600}
+.chip.on{background:var(--black);color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.card{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,.1);display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#eee}
+.cb{padding:12px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tag{font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:1px}
+.cb h3{font-size:1rem}
+.price{font-weight:800;font-size:1.1rem}
+.row{display:flex;gap:6px}
+.row select{flex:1;padding:8px;border:1px solid #cdbf9f;border-radius:8px;background:#fff}
+.card .btn{width:100%;margin-top:auto;padding:10px;border-radius:10px}
+.empty{text-align:center;padding:30px;color:#777;grid-column:1/-1}
+.dark-sec{background:var(--black);color:var(--cream)}
+.dark-sec h2{color:var(--gold)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.box{background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:20px}
+.box h3{color:var(--gold);margin-bottom:8px}
+.light .box{background:#fff;border-color:#e3d7bb;color:var(--text)}
+footer{background:#000;color:#aaa;text-align:center;padding:20px;font-size:.85rem;border-top:2px solid var(--gold)}
+.demo{background:#fff3cd;color:#664d03;text-align:center;font-size:.85rem;padding:6px}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;z-index:90}
+.ov.show{display:block}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--cream);z-index:100;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column}
+.drawer.show{transform:none}
+.dh{background:var(--black);color:var(--gold);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.dh button{background:none;border:0;color:var(--gold);font-size:1.6rem;cursor:pointer}
+.items{flex:1;overflow:auto;padding:12px}
+.item{display:flex;gap:10px;background:#fff;border-radius:10px;padding:8px;margin-bottom:10px}
+.item img{width:64px;height:80px;object-fit:cover;border-radius:6px}
+.item .in{flex:1;font-size:.88rem}
+.qty{display:flex;align-items:center;gap:8px;margin-top:6px}
+.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--black);background:#fff;font-size:1rem;cursor:pointer}
+.rm{background:none;border:0;color:#b00020;cursor:pointer;font-size:.8rem;margin-left:auto}
+.df{padding:12px 16px;background:#fff;border-top:1px solid #ddd}
+.df input{width:100%;padding:10px;margin-bottom:8px;border:1px solid #cdbf9f;border-radius:8px;font-size:1rem}
+.tot{display:flex;justify-content:space-between;font-weight:800;font-size:1.15rem;margin-bottom:8px}
+.wa{background:#25D366;color:#fff;width:100%;padding:13px;border:0;border-radius:10px;font-weight:700;font-size:1rem;cursor:pointer}
+@media(max-width:720px){
+.menu{display:block}
+.links{position:absolute;top:60px;left:0;right:0;background:var(--black);flex-direction:column;padding:14px;display:none;gap:14px}
+.links.open{display:flex}
+.grid{grid-template-columns:repeat(2,1fr);gap:12px}
+.cb{padding:9px}.cb h3{font-size:.9rem}
+.row{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<!--
+=====================================================
+ HOW TO CHANGE WHATSAPP NUMBER / PRODUCTS
+ 1) Edit WHATSAPP_NUMBER below (country code + number).
+ 2) Edit the PRODUCTS array below: name, price, sizes,
+    colors, img (image link). Leave img "" to show a
+    stylish placeholder.
+=====================================================
+-->
+<div class="demo">Demo products &amp; example prices only — edit them in the PRODUCTS array.</div>
+<header>
+<div class="wrap nav">
+<a class="logo" href="#home">GORAYA FASHION STORE</a>
+<nav class="links" id="links">
+<a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#delivery">Delivery</a><a href="#contact">Contact</a>
+</nav>
+<div style="display:flex;gap:8px;align-items:center">
+<button class="cartbtn" onclick="openCart()">🛒 <span id="cnt">0</span></button>
+<button class="menu" onclick="document.getElementById('links').classList.toggle('open')" aria-label="Menu">☰</button>
+</div>
+</div>
+</header>
+
+<div class="hero" id="home">
+<small>NEW COLLECTION</small>
+<h1>GORAYA FASHION STORE</h1>
+<p>Elegant men's &amp; women's clothing. Choose your style, add to cart and order directly on WhatsApp.</p>
+<a class="btn" href="#shop">Shop Now</a>
+</div>
+
+<section id="shop">
+<div class="wrap">
+<h2 class="title">Our Collection</h2>
+<p class="sub">Men &amp; Women — Prices in PKR</p>
+<div class="tools">
+<input id="q" type="search" placeholder="Search products...">
+<select id="sort">
+<option value="def">Sort: Default</option>
+<option value="low">Price: Low to High</option>
+<option value="high">Price: High to Low</option>
+</select>
+</div>
+<div class="chips" id="chips" style="margin-bottom:22px">
+<button class="chip on" data-c="all">All</button>
+<button class="chip" data-c="men">Men</button>
+<button class="chip" data-c="women">Women</button>
+</div>
+<div class="grid" id="grid"></div>
+</div>
+</section>
+
+<section class="dark-sec" id="about">
+<div class="wrap">
+<h2 class="title">About Us</h2>
+<p class="sub" style="color:#bbb;max-width:650px;margin:0 auto 24px">GORAYA FASHION STORE brings quality fabrics, neat stitching and modern designs for men and women at fair prices. Easy ordering, friendly service.</p>
+<div class="cols">
+<div class="box"><h3>Quality Fabric</h3>Carefully selected materials for comfort and long life.</div>
+<div class="box"><h3>Latest Designs</h3>Traditional and modern styles for every occasion.</div>
+<div class="box"><h3>Easy Ordering</h3>Add to cart and send your order on WhatsApp in seconds.</div>
+</div>
+</div>
+</section>
+
+<section class="light" id="delivery">
+<div class="wrap">
+<h2 class="title">Delivery &amp; Returns</h2>
+<p class="sub">Please confirm final details on WhatsApp</p>
+<div class="cols">
+<div class="box"><h3>🚚 Delivery</h3>Delivery across Pakistan. Usual time: 3–7 working days. Delivery charges are confirmed on WhatsApp.</div>
+<div class="box"><h3>↩️ Return / Exchange</h3>Wrong size or damaged item? Contact us within 3 days of receiving for exchange. Item must be unused with tags.</div>
+<div class="box"><h3>💵 Payment</h3>Cash on Delivery or other methods confirmed on WhatsApp.</div>
+</div>
+</div>
+</section>
+
+<section class="dark-sec" id="contact">
+<div class="wrap" style="text-align:center">
+<h2 class="title">Contact Us</h2>
+<p class="sub" style="color:#bbb">Questions about sizes, colors or orders? Message us.</p>
+<a class="btn" id="waContact" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+<p style="margin-top:16px;color:#bbb" id="numShow"></p>
+</div>
+</section>
+
+<footer>© <span id="yr"></span> GORAYA FASHION STORE. All rights reserved.</footer>
+
+<div class="ov" id="ov" onclick="closeCart()"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart">
+<div class="dh"><b>Your Cart</b><button onclick="closeCart()" aria-label="Close">×</button></div>
+<div class="items" id="items"></div>
+<div class="df">
+<input id="cname" placeholder="Your name (optional)">
+<input id="caddr" placeholder="City / address (optional)">
+<div class="tot"><span>Total</span><span id="total">Rs. 0</span></div>
+<button class="wa" onclick="order()">Order on WhatsApp</button>
+</div>
+</aside>
+
+<script>
+/* ===== SETTINGS: change your WhatsApp number here ===== */
+const WHATSAPP_NUMBER = "+92-3421579186";
+
+/* ===== PRODUCTS (demo data - prices are examples) ===== */
+const PRODUCTS = [
+{id:1,name:"Classic Cotton Shalwar Kameez",cat:"men",price:4500,sizes:["S","M","L","XL"],colors:["White","Black","Grey"],img:""},
+{id:2,name:"Premium Wash & Wear Suit",cat:"men",price:5800,sizes:["M","L","XL","XXL"],colors:["Navy","Brown","Cream"],img:""},
+{id:3,name:"Embroidered Kurta",cat:"men",price:3200,sizes:["S","M","L","XL"],colors:["Black","Maroon","Green"],img:""},
+{id:4,name:"Casual Polo T-Shirt",cat:"men",price:1800,sizes:["S","M","L","XL"],colors:["Black","White","Blue"],img:""},
+{id:5,name:"Formal Waistcoat",cat:"men",price:6500,sizes:["M","L","XL"],colors:["Black","Charcoal"],img:""},
+{id:6,name:"Slim Fit Trousers",cat:"men",price:2800,sizes:["30","32","34","36"],colors:["Black","Beige","Grey"],img:""},
+{id:7,name:"Printed Lawn 3-Piece Suit",cat:"women",price:5200,sizes:["S","M","L"],colors:["Pink","Blue","Yellow"],img:""},
+{id:8,name:"Embroidered Chiffon Suit",cat:"women",price:8900,sizes:["S","M","L","XL"],colors:["Maroon","Emerald","Black"],img:""},
+{id:9,name:"Casual Cotton Kurti",cat:"women",price:2600,sizes:["S","M","L","XL"],colors:["White","Peach","Sky Blue"],img:""},
+{id:10,name:"Party Wear Gown",cat:"women",price:12500,sizes:["S","M","L"],colors:["Gold","Black","Wine"],img:""},
+{id:11,name:"Silk Dupatta",cat:"women",price:1900,sizes:["Free Size"],colors:["Cream","Gold","Red"],img:""},
+{id:12,name:"Winter Khaddar Suit",cat:"women",price:6200,sizes:["S","M","L","XL"],colors:["Brown","Grey","Teal"],img:""}
+];
+
+/* ===== Helpers ===== */
+const $ = id => document.getElementById(id);
+const money = n => "Rs. " + Number(n).toLocaleString("en-PK");
+const waNum = () => WHATSAPP_NUMBER.replace(/\D/g, "");
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function ph(name){
+  const t = esc(name).slice(0,28);
+  const svg = "<svg xmlns='http://www.w3.org/2000/svg' width='400' height='500'><rect width='400' height='500' fill='#0d0d0d'/><rect x='14' y='14' width='372' height='472' fill='none' stroke='#c9a24b' stroke-width='3'/><text x='200' y='235' font-size='70' font-family='serif' fill='#c9a24b' text-anchor='middle'>G</text><text x='200' y='290' font-size='18' font-family='sans-serif' fill='#f5efe3' text-anchor='middle'>" + t + "</text></svg>";
+  return "data:image/svg+xml," + encodeURIComponent(svg);
+}
+function imgSrc(p){ return p.img ? p.img : ph(p.name); }
+
+/* ===== State ===== */
+let cat = "all", cart = [];
+try { cart = JSON.parse(localStorage.getItem("gfs_cart") || "[]"); if(!Array.isArray(cart)) cart = []; } catch(e){ cart = []; }
+const save = () => { try { localStorage.setItem("gfs_cart", JSON.stringify(cart)); } catch(e){} };
+
+/* ===== Shop ===== */
+function render(){
+  const q = $("q").value.trim().toLowerCase();
+  let list = PRODUCTS.filter(p => (cat === "all" || p.cat === cat) && p.name.toLowerCase().includes(q));
+  const s = $("sort").value;
+  if(s === "low") list.sort((a,b) => a.price - b.price);
+  if(s === "high") list.sort((a,b) => b.price - a.price);
+  if(!list.length){ $("grid").innerHTML = "<div class='empty'>No products found.</div>"; return; }
+  $("grid").innerHTML = list.map(p =>
+    "<div class='card'>" +
+    "<img src='" + esc(imgSrc(p)) + "' alt='" + esc(p.name) + "' loading='lazy' onerror=\"this.onerror=null;this.src=ph(this.alt)\">" +
+    "<div class='cb'><span class='tag'>" + (p.cat === "men" ? "Men" : "Women") + "</span>" +
+    "<h3>" + esc(p.name) + "</h3><div class='price'>" + money(p.price) + "</div>" +
+    "<div class='row'><select id='s" + p.id + "' aria-label='Size'>" + p.sizes.map(x => "<option>" + esc(x) + "</option>").join("") + "</select>" +
+    "<select id='c" + p.id + "' aria-label='Color'>" + p.colors.map(x => "<option>" + esc(x) + "</option>").join("") + "</select></div>" +
+    "<button class='btn dark' onclick='addToCart(" + p.id + ")'>Add to Cart</button></div></div>"
+  ).join("");
+}
+
+/* ===== Cart ===== */
+function addToCart(id){
+  const size = $("s" + id).value, color = $("c" + id).value;
+  const f = cart.find(i => i.id === id && i.size === size && i.color === color);
+  if(f) f.qty++; else cart.push({id, size, color, qty:1});
+  save(); updateCart(); openCart();
+}
+function change(i, d){
+  cart[i].qty += d;
+  if(cart[i].qty < 1) cart.splice(i, 1);
+  save(); updateCart();
+}
+function removeItem(i){ cart.splice(i, 1); save(); updateCart(); }
+function totalPrice(){
+  return cart.reduce((t, i) => { const p = PRODUCTS.find(x => x.id === i.id); return t + (p ? p.price * i.qty : 0); }, 0);
+}
+function updateCart(){
+  cart = cart.filter(i => PRODUCTS.some(p => p.id === i.id));
+  $("cnt").textContent = cart.reduce((n, i) => n + i.qty, 0);
+  $("total").textContent = money(totalPrice());
+  if(!cart.length){ $("items").innerHTML = "<p class='empty'>Your cart is empty.</p>"; return; }
+  $("items").innerHTML = cart.map((i, k) => {
+    const p = PRODUCTS.find(x => x.id === i.id);
+    return "<div class='item'><img src='" + esc(imgSrc(p)) + "' alt='" + esc(p.name) + "' onerror=\"this.onerror=null;this.src=ph(this.alt)\">" +
+    "<div class='in'><b>" + esc(p.name) + "</b><br>Size: " + esc(i.size) + " | Color: " + esc(i.color) + "<br>" + money(p.price) +
+    "<div class='qty'><button onclick='change(" + k + ",-1)'>−</button><b>" + i.qty + "</b><button onclick='change(" + k + ",1)'>+</button>" +
+    "<button class='rm' onclick='removeItem(" + k + ")'>Remove</button></div></div></div>";
+  }).join("");
+}
+function openCart(){ $("drawer").classList.add("show"); $("ov").classList.add("show"); }
+function closeCart(){ $("drawer").classList.remove("show"); $("ov").classList.remove("show"); }
+
+/* ===== WhatsApp Order ===== */
+function order(){
+  if(!cart.length){ alert("Your cart is empty."); return; }
+  let m = "*New Order - GORAYA FASHION STORE*\n\n";
+  cart.forEach((i, k) => {
+    const p = PRODUCTS.find(x => x.id === i.id);
+    m += (k + 1) + ". " + p.name + "\n   Size: " + i.size + "\n   Color: " + i.color + "\n   Qty: " + i.qty + "\n   Price: " + money(p.price * i.qty) + "\n\n";
+  });
+  m += "*Total: " + money(totalPrice()) + "*\n";
+  const n = $("cname").value.trim(), a = $("caddr").value.trim();
+  if(n) m += "\nName: " + n;
+  if(a) m += "\nAddress: " + a;
+  m += "\n\nPlease confirm my order. Thank you!";
+  window.open("https://wa.me/" + waNum() + "?text=" + encodeURIComponent(m), "_blank");
+}
+
+/* ===== Init ===== */
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".chip").forEach(x => x.classList.remove("on"));
+  b.classList.add("on"); cat = b.dataset.c; render();
+}));
+$("q").addEventListener("input", render);
+$("sort").addEventListener("change", render);
+document.querySelectorAll("#links a").forEach(a => a.addEventListener("click", () => $("links").classList.remove("open")));
+$("waContact").href = "https://wa.me/" + waNum() + "?text=" + encodeURIComponent("Hello GORAYA FASHION STORE, I need some information.");
+$("numShow").textContent = "WhatsApp: " + WHATSAPP_NUMBER;
+$("yr").textContent = new Date().getFullYear();
+render(); updateCart();
+</script>
+</body>
+</html>
